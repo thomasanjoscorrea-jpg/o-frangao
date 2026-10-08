@@ -1,5 +1,5 @@
-// Número do WhatsApp do restaurante que recebe os pedidos: só dígitos, com 55 + DDD.
-const WHATSAPP = "554484299854";
+﻿// Número do WhatsApp do restaurante que recebe os pedidos: só dígitos, com 55 + DDD.
+const WHATSAPP = "554498066341";
 
 // Cada item pode ter "opcoes" (tamanhos) ou "preco". Sem preço = a consultar.
 // "img" é o nome do arquivo em assets/produtos/.
