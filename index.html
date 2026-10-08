@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O Frangão — Restaurante</title>
+  <meta name="description" content="Cardápio do O Frangão: porções, pratos executivos, feijoada e bebidas. Faça seu pedido pelo WhatsApp.">
+  <meta name="theme-color" content="#161616">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="O Frangão — Restaurante">
+  <meta property="og:description" content="Porções, pratos executivos, feijoada e bebidas. Faça seu pedido pelo WhatsApp.">
+  <meta property="og:image" content="https://thomasanjoscorrea-jpg.github.io/o-frangao/assets/logo.webp">
+  <link rel="icon" href="assets/logo.webp">
+  <link rel="stylesheet" href="style.css?v=202610080033">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#">
+      <img src="assets/logo.webp" alt="" class="logo" width="44" height="44">
+      <span>O Frangão</span>
+    </a>
+    <nav class="atalhos" id="atalhos" aria-label="Categorias do cardápio"></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-conteudo">
+        <h1>O Frangão</h1>
+        <p class="hero-texto">Escolha no cardápio e envie o pedido pelo WhatsApp.</p>
+        <a class="btn" href="#cardapio">Veja o cardápio</a>
+      </div>
+      <img src="assets/logo.webp" alt="" class="hero-logo" width="100" height="100">
+    </section>
+
+    <div class="layout">
+      <section id="cardapio" class="cardapio" aria-labelledby="titulo-cardapio">
+        <h2 id="titulo-cardapio">Nosso cardápio</h2>
+        <noscript>
+          <p class="aviso">Ative o JavaScript para ver o cardápio e fazer o pedido.</p>
+        </noscript>
+        <div id="categorias"></div>
+      </section>
+
+      <aside class="painel" id="painel" aria-labelledby="titulo-pedido">
+        <div class="painel-topo">
+          <h2 id="titulo-pedido">Seu pedido</h2>
+          <button type="button" class="fechar" id="fecharCarrinho" aria-label="Fechar carrinho">×</button>
+        </div>
+        <ul class="itens-carrinho" id="itensCarrinho"></ul>
+
+        <div id="rodapeCarrinho" class="total-linha" hidden>
+          <button type="button" class="link" id="limpar">Limpar carrinho</button>
+          <p class="total">Total: <strong id="totalPainel">R$ 0,00</strong></p>
+        </div>
+
+        <form id="form" class="form" hidden>
+          <label>Seu nome
+            <input type="text" name="nome" required autocomplete="name">
+          </label>
+          <fieldset>
+            <legend>Como quer receber?</legend>
+            <label class="radio"><input type="radio" name="tipo" value="Entrega" checked> Entrega</label>
+            <label class="radio"><input type="radio" name="tipo" value="Retirada"> Retirada no local</label>
+          </fieldset>
+          <label id="campoEndereco">Endereço de entrega
+            <input type="text" name="endereco" autocomplete="street-address">
+          </label>
+          <label>Forma de pagamento (na entrega)
+            <select name="pagamento">
+              <option>Pix</option>
+              <option>Dinheiro</option>
+              <option>Cartão</option>
+            </select>
+          </label>
+          <label>Observações
+            <textarea name="obs" rows="2" placeholder="Ex.: sem cebola, troco para R$ 50"></textarea>
+          </label>
+          <button type="submit" class="btn btn-whats">Enviar pedido pelo WhatsApp</button>
+        </form>
+      </aside>
+    </div>
+
+    <section class="como" id="como" aria-labelledby="titulo-como">
+      <h2 id="titulo-como">Como pedir</h2>
+      <ol>
+        <li>Adicione os itens ao carrinho.</li>
+        <li>Informe seu nome e se é entrega ou retirada.</li>
+        <li>Toque em “Enviar pedido” e o WhatsApp abre com tudo pronto.</li>
+      </ol>
+      <p class="aviso">O pagamento é combinado direto com o restaurante pelo WhatsApp.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <img src="assets/logo.webp" alt="" class="logo-pequeno" width="56" height="56">
+    <p>O Frangão — Restaurante</p>
+  </footer>
+
+  <button type="button" class="barra-carrinho" id="abrirCarrinho" hidden>
+    <span id="qtdTotal">0 itens</span>
+    <span>Ver carrinho</span>
+    <span id="valorTotal">R$ 0,00</span>
+  </button>
+
+  <div class="fundo" id="fundo" hidden></div>
+
+  <script src="menu.js?v=202610080033"></script>
+  <script src="app.js?v=202610080033"></script>
+</body>
+</html>
